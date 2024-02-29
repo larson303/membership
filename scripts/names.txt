@@ -1,0 +1,39 @@
+# List of Muppet Show and cartoon characters
+# CHARACTERS = [
+#     ("Kermit", "Frog"),
+#     ("Fozzy", "Bear"),
+#     ("Miss", "Piggy"),  # Keep Piggy unique
+#     ("Gonzo", "Alien"),  # Keep Gonzo's mysterious origin
+#     ("Animal", "Drummer"),  # Animal's full name is just Animal
+#     ("Bunsen", "Honeydew"),  # Keep full name
+#     ("Beaker", "Assistant"),  # Beaker doesn't have a known last name
+#     ("Scooter", "Jones"),  # Scooter's full name is just Scooter
+#     ("Lew", "Zealand"),  # Lew Zealand's full name is just Lew Zealand
+#     ("Statler", "Waldorf"),  # Keep full name as a pair
+#     ("Swedish", "Chef"),  # Swedish Chef's full name is just Swedish Chef
+#     ("Rolf", "Dog"),
+#     ("Pepe", "Prawn"),
+#     ("Sam", "Eagle"),
+#     ("Janice", "Smith"),  # Janice doesn't have a known last name
+#     ("Floyd", "Pepper"),
+#     ("Zoot", "Zooter"),  # Zoot doesn't have a known last name
+#     ("Doctor", "Teeth"),  # Dr. Teeth's full name is just Dr. Teeth
+#     ("Dick", "Dastardly"),  # Dick Dastardly's full name is just Dick Dastardly
+#     ("Muttley", "Dog"),  # Muttley doesn't have a known last name
+#     ("Scooby", "Doo"),  # Scooby-Doo's full name is just Scooby-Doo
+#     ("Shaggy", "Rogers"),
+#     ("Fred", "Jones"),
+#     ("Daphne", "Blake"),
+#     ("Velma", "Dinkley"),
+#     ("Bugs", "Bunny"),
+#     ("Daffy", "Duck"),
+#     ("Elmer", "Fudd"),
+#     ("Wile E.", "Coyote"),  # Keep "E." for accuracy
+#     ("Road", "Runner"),  # Road Runner doesn't have a known last name
+#     ("Tweety", "Bird"),  # Tweety's full name is just Tweety
+#     ("Sylvester", "Cat"),
+#     ("Marvin", "Martian"),
+#     ("Yosemite", "Sam"),
+#     ("Porky", "Pig"),
+#     ("Foghorn", "Leghorn"),
+# ]
