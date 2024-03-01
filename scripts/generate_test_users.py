@@ -48,7 +48,7 @@ def generate_phone_number():
     return f"({area_code}) {prefix}-{line_number}"
 
 # Function to create a user record
-def create_user(name, group_name="TEST"):
+def create_user_sql(name, group_name="TEST"):
     first_name, last_name = name.split(" ")
     email = generate_email(name)
     password = generate_password()
@@ -68,6 +68,30 @@ def create_user(name, group_name="TEST"):
         "city": city,
         "state": state,
         "phone_number": phone_number,
+        "title": title,
+        "bio": bio
+    }
+
+def create_user_json(name, group_name="TEST"):
+    first_name, last_name = name.split(" ")
+    email = generate_email(name)
+    password = generate_password()
+    address = generate_address()
+    city = address.split(", ")[1]
+    state = address.split(", ")[2].split()[0]
+    phone_number = generate_phone_number()
+    title = "Software Engineer" if random.random() > 0.5 else "Product Manager"
+    bio = f"I'm a big fan of {random.choice(['Muppet Show', 'cartoons'])}!"
+    return {
+        "firstName": first_name,
+        "lastName": last_name,
+        "email": email,
+        "password": password,
+        "groupName": group_name,
+        "address": address,
+        "city": city,
+        "state": state,
+        "phoneNumber": phone_number,
         "title": title,
         "bio": bio
     }
@@ -126,23 +150,27 @@ def main():
   print("Welcome to the user generator!")
   output_format = input("Choose output format (json, sql): ")
     # Validate input format
-  if output_format.lower() not in ["json", "sql"]:
-    print("Invalid output format. Please choose json or sql.")
+  output_format = output_format.lower()
+  if output_format not in ["json", "sql", "cat"]:
+    print(f"Invalid output format. Please choose json or sql. {output_format} not valid.")
     return
   else:
     print(f"Generating users in {output_format} format...")
 
-    # Generate users
-  users = [create_user(name) for name in CHARACTERS]
 
   # Generate output based on chosen format
-  if output_format.lower() == "json":
+  if output_format == "json":
+    # Generate users
+    users = [create_user_json(name) for name in CHARACTERS]
     json_data = json.dumps(users, indent=4)
     print(json_data)
-  elif output_format.lower() == "sql":
+  elif output_format == "sql":
     # Assuming a table named "users" with appropriate columns
     # Replace with your actual table name and column names
-    insert_users(users)
+    users = [create_user_sql(name) for name in CHARACTERS]
+    print(users)
+  else:
+    print("meow")
 
     # Execute when the module is not initialized from an import statement.
 if __name__ == "__main__":
